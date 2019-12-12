@@ -14,18 +14,23 @@ namespace SampleAppium
 {
     public class SampleTest
     {
-        private static AndroidDriver<AndroidElement> _driver;
+        private static IWebDriver _driver;        
         private static string udid = "192.168.68.101:5555";
 
         [TestCase(TestName = "First Test", Description = "First Test to open Google.com in Android")]
         public void FirstTest()
         {
             _driver.Navigate().GoToUrl("https://www.khmerdev.com/");
-            _driver.FindElementByCssSelector(".color-white > span");
+            //_driver.FindElementByCssSelector(".color-white > span");
+            if (_driver.GetType() == typeof(AndroidDriver<AndroidElement>))
+            {
+                AndroidDriver<AndroidElement> androidDriver = (AndroidDriver<AndroidElement>)_driver;
+                androidDriver.FindElementByCssSelector(".color-white > span");
+            }
         }
         [SetUp]
         public void Setup()
-        {
+        {            
             var appiumOptions = new AppiumOptions();            
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.PlatformName, MobilePlatform.Android);
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.Udid, udid);
