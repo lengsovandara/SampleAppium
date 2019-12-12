@@ -1,7 +1,7 @@
 ## Automate Mobile Web by using Appium with C#
 
 ## Prerequisite
-- [`Appium Server`] (https://github.com/appium/appium-desktop/releases/tag/v1.15.1).
+- [`Appium Server`](https://github.com/appium/appium-desktop/releases/tag/v1.15.1).
 - Android device with Google Chrome installed.
 - [`Chrome Selenium Driver`](https://chromedriver.storage.googleapis.com/index.html?path=79.0.3945.36/), keep in some folder.
 - 
