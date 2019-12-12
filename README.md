@@ -10,11 +10,11 @@
 - getting appium server via `appium`
 
 ## Testing Procedure
-Step 1: Connection with Android Device
-Step 2: Open Google Chrome
-Step 3: Navigate to website
-Step 4: Find element
-Test passed.
+- Step 1: Connection with Android Device
+- Step 2: Open Google Chrome
+- Step 3: Navigate to website
+- Step 4: Find element
+- Test passed.
 
 ## More Information
 - http://appium.io/
